@@ -26,12 +26,12 @@
     "reflect-metadata": "^0.1.8"
   },
   "peerDependencies": {
-    "cascade": "^0.0.23"
+    "cubex_cascade": "https://github.com/zill4/cubex_cascade#main"
   },
   "devDependencies": {
     "@types/chai": "^4.0.0",
     "@types/mocha": "^2.2.41",
-    "cascade": "^0.0.23",
+    "cubex_cascade": "https://github.com/zill4/cubex_cascade#main",
     "chai": "^4.0.2",
     "es6-shim": "^0.35.3",
     "jsdom": "^11.0.0",

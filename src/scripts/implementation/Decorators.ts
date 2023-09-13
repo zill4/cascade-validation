@@ -1,4 +1,4 @@
-import Cascade from 'cascade';
+import Cascade from 'cubex_cascade';
 
 import Validation from './Validation';
 import Rule from './Rule';

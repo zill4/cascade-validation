@@ -1,4 +1,4 @@
-import Cascade from 'cascade';
+import cubex_cascade from 'cubex_cascade';
 
 import Rule from './Rule';
 

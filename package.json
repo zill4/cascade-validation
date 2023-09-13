@@ -19,27 +19,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sjohnsonaz/cascade-validation.git"
+    "url": "https://github.com/zill4/cascade-validation.git"
   },
   "dependencies": {
     "es6-shim": "^0.35.1",
     "reflect-metadata": "^0.1.8"
   },
   "peerDependencies": {
-    "cubex_cascade": "https://github.com/zill4/cubex_cascade#main"
+    "cascade": "https://github.com/zill4/cascade#main"
   },
   "devDependencies": {
     "@types/chai": "^4.0.0",
-    "@types/mocha": "^2.2.41",
-    "cubex_cascade": "https://github.com/zill4/cubex_cascade#main",
+    "@types/mocha": "^10.0.1",
     "chai": "^4.0.2",
+    "cascade": "https://github.com/zill4/cascade#main",
     "es6-shim": "^0.35.3",
-    "jsdom": "^11.0.0",
-    "mocha": "^3.4.2",
+    "jsdom": "^22.1.0",
+    "mocha": "^10.2.0",
     "reflect-metadata": "^0.1.10",
-    "ts-loader": "^2.1.0",
-    "typescript": "^2.3.4",
-    "webpack": "^2.6.1"
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2"
   },
   "keywords": [
     "cascade",

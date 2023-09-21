@@ -1,20 +1,13 @@
-import Cascade from 'cascade';
-import Rule from './Rule';
-
-export interface RuleIndex {
-    [index: string]: Rule<any>;
-}
-
-export default class Validation {
-    parent: any;
-    ruleIndex: RuleIndex = {};
-    rules: Rule<any>[] = [];
-
-    constructor(parent?: any) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var cascade_1 = require("cascade");
+var Validation = (function () {
+    function Validation(parent) {
+        this.ruleIndex = {};
+        this.rules = [];
         this.parent = parent;
     }
-
-    static attachGraph(obj) {
+    Validation.attachGraph = function (obj) {
         if (!obj._validation) {
             Object.defineProperty(obj, '_validation', {
                 configurable: true,
@@ -23,21 +16,17 @@ export default class Validation {
                 value: new Validation(obj)
             });
         }
-        return obj._validation as Validation;
-    }
-
-    static createProperty<T>(obj: any, property: string, rule: Rule<T>) {
+        return obj._validation;
+    };
+    Validation.createProperty = function (obj, property, rule) {
         Validation.attachGraph(obj);
-        //if (obj._validation.rules[property]) { }
         obj._validation.ruleIndex[property] = rule;
-    }
-
-    static createRule<T>(obj: any, property: string, rule: Rule<T>) {
-        Cascade.attachObservable(obj, property + '-valid', rule);
+    };
+    Validation.createRule = function (obj, property, rule) {
+        cascade_1.default.attachObservable(obj, property + '-valid', rule);
         Validation.createProperty(obj, property, rule);
-    }
-
-    static addRule<T>(obj: any, property: string, rule: Rule<T>) {
+    };
+    Validation.addRule = function (obj, property, rule) {
         var validation = Validation.attachGraph(obj);
         var oldRule = validation.ruleIndex[property];
         if (oldRule) {
@@ -48,5 +37,8 @@ export default class Validation {
         }
         validation.ruleIndex[property] = rule;
         validation.rules.push(rule);
-    }
-}
+    };
+    return Validation;
+}());
+exports.default = Validation;
+//# sourceMappingURL=Validation.js.map

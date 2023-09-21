@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {observable} from 'cubex_cascade';
+import {observable} from 'cascade';
 
 import {required} from '../scripts/CascadeValidation';
 

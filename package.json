@@ -9,7 +9,7 @@
   "typings": "dist/scripts/CascadeValidation.d.ts",
   "scripts": {
     "install": "",
-    "build": "tsc",
+    "build": "tsc --declaration",
     "prepublish": "tsc --declaration",
     "test": "node src/mocha/NodeRunner.js",
     "min": "webpack --config webpack.config.js --progress",
